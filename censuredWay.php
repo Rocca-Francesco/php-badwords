@@ -2,7 +2,7 @@
 $yourText = $_GET["yourText"];
 $censuredWord = $_GET["censuredWord"];
 
-$censuredText = str_replace($censuredWord,"***",$yourText);
+$censuredText = str_replace($censuredWord,"*** ",$yourText);
 ?>
 
 
@@ -22,9 +22,9 @@ $censuredText = str_replace($censuredWord,"***",$yourText);
 <body>
   <div class="container">
     <h2>Il testo originale era:</h2>
-    <p><?= $yourText ?></p>
+    <p><? echo $yourText . ". E la sua lunghezza è " . strlen($yourText) ?></p>
     <h2>Il testo censurato è:</h2>
-    <p><?= $censuredText ?></p>
+    <p><? echo $censuredText . ". E la sua lunghezza è " . strlen($censuredText) ?></p>
   </div>
 </body>
 </html>
